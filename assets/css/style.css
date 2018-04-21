@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "My Webfont";
+  src: url("../webfonts/fa-regular-400.eot"); /* IE9 Compat Modes */
+  src: url("../webfonts/fa-regular-400.eot#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../webfonts/fa-regular-400.woff") format("woff"),
+    /* Modern Browsers */ url("../webfonts/fa-regular-400.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("../webfonts/fa-regular-400.svg#svgFontName")
+      format("svg"); /* Legacy iOS */
+}
+
+* {
+  font-family: Font Awesome/ 5 Free;
+  src: url(../webfonts/fa-regular-400.ttf);
+}
