@@ -19,7 +19,7 @@
 
 <body>
     <div class="container">
-        <h1 class="animated slideInDown box1">WEATHERMAN
+        <h1 class="animated slideInDown box1"> WEATHERMAN
         </h1>
         <form class="input-group box2" onsubmit="event.preventDefault()">
             <div class="input-group-prepend">
@@ -27,25 +27,52 @@
                     <i class="fas fa-crosshairs"></i>
                 </button>
             </div>
-            <input type="text" class="form-control" id="searchParam" placeholder="Enter a city name here..." aria-label="" aria-describedby="basic-addon1">
+            <input type="text" class="form-control" id="searchParam" placeholder="Where do you live..." aria-label="" aria-describedby="basic-addon1">
             <div class="input-group-append">
-                <button class="btn btn-outline-secondary" id="search" type="submit" data-toggle="tooltip" data-placement="bottom" title="Lets Call the Weatherman">
-                    <strong>Get Weather...</strong>
+                <button class="btn btn-lg btn-outline-secondary" id="search" type="submit" data-toggle="tooltip" data-placement="bottom"
+                    title="Lets Call the Weatherman">
+                    <strong>
+                        <i class="fas fa-search"></i>
+                    </strong>
                 </button>
             </div>
         </form>
 
-        <div class="card text-white bg-dark mb-3" style="max-width: 50rem">
-            <div class="card-header" id="titleText">Details</div>
-            <div class="card-body row">
-                <div class="col-md-4" id="icon"></div>
-                <div class="col-md-4" id="icon2"></div>
-                <div class="col-md-4">
-                    <p class="card-text" id="descText"></p>
+        <div class="box3">
+            <div class="row">
+                <div class="card mb-3" id="cityDetails">
+                    <div class="card-body">
+                        <p class="card-text" id="descText">Small Icon + Description</p>
+                        <p>Max Min</p>
+                        <h3>Current Temp</h3>
+                    </div>
+                </div>
+                <div class="card mb-3" id="card2">
+                    <div class="card-header" id="titleText">Temperature</div>
+                    <div class="card-body">
+                        <p class="card-text" id="descText">Small Icon + Description</p>
+                        <p>Max Min</p>
+                        <h3>Current Temp</h3>
+                    </div>
+                </div>
+                <div class="card mb-3" id="card1">
+                    <div class="card-header" id="titleText">Details</div>
+                    <div class="card-body row">
+                        <div class="col-md-6" id="icon">
+                            <h2>Larger Icon</h2>
+                        </div>
+                        <div class="col-md-6">
+                            <h4>a</h4>
+                            <h4>a</h4>
+                            <h4>a</h4>
+                            <h4>a</h4>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
     <footer>
         <span class="copyright ">
             <strong>&copy; Made with
@@ -54,6 +81,8 @@
             </strong>
         </span>
     </footer>
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo "
         crossorigin="anonymous "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js " integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ "
@@ -62,7 +91,6 @@
         crossorigin="anonymous "></script>
     </script>
     <script src="assets/js/main.js "></script>
-
 </body>
 
 </html>

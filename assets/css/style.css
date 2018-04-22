@@ -11,18 +11,33 @@ body {
     letter-spacing: 1.5rem;
     text-align: center;
   }
+
+  .card {
+    width: 30% !important;
+  }
 }
 
 .wi-day-sunny {
   color: orange;
-  font-size: 4rem;
+  font-size: 6rem;
 }
 
 form {
   margin-bottom: 30px;
 }
 #searchParam {
-  border: black solid 1px;
+  /* border: black solid 2px; */
+  border-color: black;
+  border-top: solid 1px;
+  border-bottom: solid 1px;
+  text-transform: uppercase;
+}
+
+#searchParam:hover {
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+  border-left: 0px;
+  border-right: 0px;
 }
 
 h1 {
@@ -34,13 +49,13 @@ h1 {
 #locate {
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
-  border: black solid 1px;
+  border: black solid 3px;
 }
 
 #search {
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
-  border: black solid 1px;
+  border: black solid 3px;
 }
 
 .container {
@@ -54,13 +69,37 @@ h1 {
   color: black;
 }
 
-.box1 .box2 {
+.btn-outline-secondary:hover {
+  width: 100px;
+  background-color: burlywood;
+  color: black;
+}
+
+.box1,
+.box2,
+.box3 {
   flex: 1;
 }
 
-.box3 {
-  flex: 1;
-  margin: 20px;
+.card {
+  background-color: #fffcf5;
+  border: black 2px solid;
+  margin: 10px;
+  width: 100%;
+}
+
+h4 {
+  border-bottom: black solid 1px;
+}
+
+.card-header {
+  font-size: 2em;
+  text-align: center;
+}
+
+.card-header {
+  background-color: #fffcf5;
+  border-bottom: black 2px solid;
 }
 
 /*
