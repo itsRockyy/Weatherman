@@ -1,12 +1,11 @@
 body {
   background-color: #fffcf5;
   font-family: "Courier", Courier, monospace;
-  color: midnightblue;
 }
 
 @media only screen and (min-width: 700px) {
   h1 {
-    font-size: 6rem;
+    font-size: 7rem;
     font-weight: 300;
     line-height: 1.2;
     letter-spacing: 1.5rem;
@@ -14,8 +13,16 @@ body {
   }
 }
 
+.wi-day-sunny {
+  color: orange;
+  font-size: 4rem;
+}
+
+form {
+  margin-bottom: 30px;
+}
 #searchParam {
-  border: midnightblue solid 1px;
+  border: black solid 1px;
 }
 
 h1 {
@@ -27,13 +34,13 @@ h1 {
 #locate {
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
-  border: midnightblue solid 1px;
+  border: black solid 1px;
 }
 
 #search {
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
-  border: midnightblue solid 1px;
+  border: black solid 1px;
 }
 
 .container {
@@ -44,7 +51,7 @@ h1 {
 }
 
 .btn {
-  color: midnightblue;
+  color: black;
 }
 
 .box1 .box2 {

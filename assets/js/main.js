@@ -55,7 +55,60 @@ function searchWetaher(e) {
   )
     .then(response => response.json())
     .then(json => {
-      document.getElementById("output").innerHTML = JSON.stringify(json);
+      console.log(JSON.stringify(json));
+      document.getElementById("icon").innerHTML = `
+      <img src="https://openweathermap.org/img/w/${
+        json.weather[0].icon
+      }.png" width="100px" height="100px" alt-text="missing image" />
+`;
+
+      document.getElementById("icon2").innerHTML = `
+     <i class="wi wi-day-sunny"></i>
+`;
+
+      document.getElementById("descText").innerHTML = `
+      Weather in ${json.name} is ${json.weather[0].main}
+      `;
+
+      //   var para = document.createElement("p");
+      //   var node = document.createTextNode("<h1>This is heading</h1>");
+      //   para.appendChild(node);
+
+      //   var element = document.getElementById("output");
+      //   element.appendChild(para);
     })
     .catch(error => console.log(error));
 }
+
+// JQuery Initializers
+$(function() {
+  $('[data-toggle="tooltip"]').tooltip();
+});
+
+/*
+JSON{
+   "name":"Mathura",
+   "sys":{"country":"IN"},
+    "coord":{  
+      "lon":77.69,
+      "lat":27.5
+   },
+   "weather":[  
+      {  
+         "main":"Clear",
+         "description":"clear sky",
+         "icon":"01d"
+      }
+   ],
+   "main":{  
+      "temp":307.543,
+      "humidity":13,
+      "temp_min":307.543,
+      "temp_max":307.543,
+     },
+   "wind":{  
+      "speed":4.76,
+      "deg":315.502
+   },
+}
+*/
