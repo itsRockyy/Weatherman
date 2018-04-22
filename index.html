@@ -8,35 +8,43 @@
     <title>Weatherman</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
-    <style>
-        body {
-            background-color: #fffcf5;
-            font-family: 'Courier', Courier, monospace;
-        }
-
-        h1 {
-            margin-top: 50px;
-            letter-spacing: 10px
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="container">
-    <h1 class="display-1 text-center animated slideInDown">WEATHERMAN</h1>
-    <button onclick="f()">try me</button>
-    <!-- Scripts -->
-    <script>
+<body>
+    <div class="container">
+        <h1 class="animated slideInDown box1">WEATHERMAN</h1>
+        <form class="input-group box2" onsubmit="event.preventDefault()">
+            <div class="input-group-prepend">
+                <button class="btn btn-lg btn-outline-secondary" id="locate" type="button">
+                    <i class="fas fa-crosshairs"></i>
+                </button>
+            </div>
+            <input type="text" class="form-control" id="searchParam" placeholder="Enter a city name here..." aria-label="" aria-describedby="basic-addon1">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" id="search" type="submit">
+                    <strong>Get Weather...</strong>
+                </button>
+            </div>
+        </form>
 
-        function f() {
-            console.log('clicked');
-            navigator.geolocation.getCurrentPosition(function (position) {
-                console.log(position.coords.latitude + "   " + position.coords.longitude);
-            });
-        }
-        f();
-    </script>
+        <div class="box3" style="border: midnightblue dotted 1px" id="output">
+            Here goes the output
+        </div>
+    </div>
+
+    <footer>
+        <span class="copyright">
+            <strong>&copy; Made with
+                <span class="fa fa-heart"></span> by
+                <a href="http://rocky93.github.io/">ROCKY</a>
+            </strong>
+        </span>
+    </footer>
+
     <script src="assets/js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -45,8 +53,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
         crossorigin="anonymous"></script>
     </script>
-
-
 </body>
 
 </html>
