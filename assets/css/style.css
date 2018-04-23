@@ -11,10 +11,9 @@ body {
     letter-spacing: 1.5rem;
     text-align: center;
   }
-
-  .card {
-    width: 30% !important;
-  }
+  /* .box3 {
+    margin-left: 75px;
+  } */
 }
 
 .wi-day-sunny {
@@ -80,12 +79,10 @@ h1 {
 .box3 {
   flex: 1;
 }
-
 .card {
   background-color: #fffcf5;
   border: black 2px solid;
   margin: 10px;
-  width: 100%;
 }
 
 h4 {

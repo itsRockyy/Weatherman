@@ -56,18 +56,17 @@ function searchWetaher(e) {
     .then(response => response.json())
     .then(json => {
       console.log(JSON.stringify(json));
-      document.getElementById("icon").innerHTML = `
-      <img src="https://openweathermap.org/img/w/${
-        json.weather[0].icon
-      }.png" width="100px" height="100px" alt-text="missing image" />
-`;
+      //       document.getElementById("icon").innerHTML = `
+      //       <img src="https://openweathermap.org/img/w/${
+      //         json.weather[0].icon
+      //       }.png" width="100px" height="100px" alt-text="missing image" />
+      // `;
 
-      document.getElementById("icon2").innerHTML = `
-     <i class="wi wi-day-sunny"></i>
-`;
-
-      document.getElementById("descText").innerHTML = `
-      Weather in ${json.name} is ${json.weather[0].main}
+      document.getElementById("weathermain").innerHTML = `
+      ${json.weather[0].main}<b>
+      Max-${json.main.temp_max}
+      Min-${json.main.temp_min}</b>
+      ${json.main.temp}
       `;
 
       //   var para = document.createElement("p");
