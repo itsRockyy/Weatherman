@@ -19,9 +19,9 @@
 
 <body>
     <div class="container">
-        <h1 class="animated slideInDown box1"> WEATHERMAN
+        <h1 class="animated slideInDown" id="title"> WEATHERMAN
         </h1>
-        <form class="input-group box2" onsubmit="event.preventDefault()">
+        <form class="input-group" onsubmit="event.preventDefault()">
             <div class="input-group-prepend">
                 <button class="btn btn-lg btn-outline-secondary" id="locate" type="button" data-toggle="tooltip" data-placement="top" title="Use Geolocation">
                     <i class="fas fa-crosshairs"></i>
@@ -37,42 +37,38 @@
                 </button>
             </div>
         </form>
-
-        <div class="box3">
-            <div class="row">
-                <div class="card mb-3 col-lg-3 col-md-3" id="cityDetails">
-                    <div class="card-body">
-                        <p class="card-text" id="descText">Small Icon + Description</p>
-                        <p>Max Min</p>
-                        <h3>Current Temp</h3>
-                    </div>
+        <div class="cardbox">
+            <div class="card mb-3" id="cityDetails">
+                <div class="card-body">
+                    <p class="card-text" id="descText">Small Icon + Description</p>
+                    <p>Max Min</p>
+                    <h3>Current Temp</h3>
                 </div>
-                <div class="card mb-3 col-lg-4 col-md-4">
-                    <div class="card-header" id="titleText">Temperature</div>
-                    <div class="card-body" id="card2">
-                        <p class="card-text" id="weathermain"></p>
-                        <p class="card-text">Max-${json.main.temp_max} Min-${json.main.temp_min}</p>
-                        <h3 class="card-text">${json.main.temp}</h3>
-                    </div>
+            </div>
+            <div class="card mb-3">
+                <div class="card-header" id="titleText">Temperature</div>
+                <div class="card-body" id="card2">
+                    <p class="card-text" id="weathermain"></p>
+                    <p class="card-text">Max-${json.main.temp_max} Min-${json.main.temp_min}</p>
+                    <h3 class="card-text">${json.main.temp}</h3>
                 </div>
-                <div class="card mb-3 col-lg-4 col-md-3" id="card1">
-                    <div class="card-header" id="titleText">Details</div>
-                    <div class="card-body row">
-                        <div class="col-md-6" id="icon">
-                            <h2>Larger Icon</h2>
-                        </div>
-                        <div class="col-md-6">
-                            <h4>a</h4>
-                            <h4>a</h4>
-                            <h4>a</h4>
-                            <h4>a</h4>
-                        </div>
+            </div>
+            <div class="card mb-3" id="card1">
+                <div class="card-header" id="titleText">Details</div>
+                <div class="card-body row">
+                    <div class="col-md-6" id="icon">
+                        <h2>Larger Icon</h2>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>a</h4>
+                        <h4>a</h4>
+                        <h4>a</h4>
+                        <h4>a</h4>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
     <footer>
         <span class="copyright ">
             <strong>&copy; Made with
@@ -81,7 +77,6 @@
             </strong>
         </span>
     </footer>
-
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo "
         crossorigin="anonymous "></script>
