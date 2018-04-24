@@ -153,3 +153,8 @@ form {
   padding-left: 1vw;
   margin: auto;
 }
+
+#bigtemp2 {
+  font-size: 100%;
+  display: inline;
+}

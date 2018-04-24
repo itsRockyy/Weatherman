@@ -55,9 +55,12 @@ function searchWetaher(e) {
   )
     .then(response => response.json())
     .then(json => {
-      // console.log(JSON.stringify(json));
-      console.log(json);
+      console.log(JSON.stringify(json));
       var temp = Math.round(json.main.temp - 273.15);
+
+      document.getElementById("card1").innerHTML = `
+      <h1 id="bigtemp2">${json.name}</h1>
+      `;
 
       document.getElementById("card2").innerHTML = `
       <p>${json.weather[0].main}</p>
