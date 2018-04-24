@@ -55,26 +55,25 @@ function searchWetaher(e) {
   )
     .then(response => response.json())
     .then(json => {
-      console.log(JSON.stringify(json));
-      //       document.getElementById("icon").innerHTML = `
-      //       <img src="https://openweathermap.org/img/w/${
-      //         json.weather[0].icon
-      //       }.png" width="100px" height="100px" alt-text="missing image" />
-      // `;
+      // console.log(JSON.stringify(json));
+      console.log(json);
+      var temp = Math.round(json.main.temp - 273.15);
 
-      document.getElementById("weathermain").innerHTML = `
-      ${json.weather[0].main}<b>
-      Max-${json.main.temp_max}
-      Min-${json.main.temp_min}</b>
-      ${json.main.temp}
+      document.getElementById("card2").innerHTML = `
+      <p>${json.weather[0].main}</p>
+      <p id="bigTemp">${temp}<sup>o</sup>C</p>
       `;
 
-      //   var para = document.createElement("p");
-      //   var node = document.createTextNode("<h1>This is heading</h1>");
-      //   para.appendChild(node);
-
-      //   var element = document.getElementById("output");
-      //   element.appendChild(para);
+      document.getElementById("card3").innerHTML = `
+      <div class="col-md-6">
+      <i class="wi wi-day-sunny"></i>
+      </div>
+      <div class="col-md-6">      
+      <p>Humidity: ${json.main.humidity}</p>
+      <p>Visibility: ${json.visibility} </p>
+      <p>Pressure: ${json.main.pressure}</p>
+      </div>
+      `;
     })
     .catch(error => console.log(error));
 }
