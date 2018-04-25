@@ -59,22 +59,28 @@ function searchWetaher(e) {
       var temp = Math.round(json.main.temp - 273.15);
 
       document.getElementById("card1").innerHTML = `
-      <p>${json.name}</p>
-      <p>Latitude: ${json.coord.lat}</p>
-      <p>Longitude: ${json.coord.lon}</p>
-      <h1 class="wi wi-strong-wind"></h1>
+      <ul>
+      <li>${json.name}</li>
+      <li>Latitude: ${json.coord.lat}</li>
+      <li>Longitude: ${json.coord.lon}</li>
+    <li><img src="assets/wind.png" alt="wind"></li>
+    </ul>
       `;
 
       document.getElementById("card2").innerHTML = `
-      <p>${json.weather[0].main}<br>
-      <p style="text-transform: capitalize">${json.weather[0].description}</p>
-      <p><i class="wi wi-thermometer"></i>${temp}</p>
+      <ul>
+      <li>${json.weather[0].main}</li>
+      <li style="text-transform: capitalize">${json.weather[0].description}</li>
+      <li><i class="wi wi-thermometer"></i>${temp}</li>
+      </ul>
       `;
 
-      document.getElementById("card3").innerHTML = `  
-      <p> <i class="wi wi-humidity"></i> ${json.main.humidity} %</p>
-      <p> <i class="wi wi-barometer"></i> ${json.main.pressure} millibars </p>
-      <p> <i class="fas fa-eye"></i>  ${json.visibility} m</p>
+      document.getElementById("card3").innerHTML = ` 
+      <ul>
+      <li> <i class="wi wi-humidity"></i> ${json.main.humidity} %</li>
+      <li> <i class="wi wi-barometer"></i> ${json.main.pressure} millibars </li>
+      <li> <i class="fas fa-eye"></i>  ${json.visibility} m</li>
+      </ul>
       `;
     })
     .catch(error => console.log(error));

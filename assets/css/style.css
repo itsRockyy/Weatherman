@@ -90,6 +90,15 @@ h1 {
   text-align: center;
 }
 
+ul {
+  list-style: none;
+}
+li {
+  margin: 1rem 0 1rem -1rem;
+  font-size: 1.7rem;
+  padding: 0;
+}
+
 /* formx */
 form {
   margin-bottom: 30px;
