@@ -75,11 +75,6 @@ footer {
   padding-bottom: 0;
 }
 
-.col-md-6 > p {
-  margin-left: -2vw;
-  border-bottom: black solid 1px;
-}
-
 .card-header {
   font-size: 2em;
   text-align: center;
@@ -141,20 +136,5 @@ form {
 
 #bigTemp {
   font-size: 8vw;
-  display: inline;
-}
-
-.wi-day-sunny {
-  font-size: 8vw;
-  margin-bottom: 10px;
-}
-
-.col-md-6 {
-  padding-left: 1vw;
-  margin: auto;
-}
-
-#bigtemp2 {
-  font-size: 100%;
   display: inline;
 }

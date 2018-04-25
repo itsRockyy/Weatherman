@@ -59,23 +59,22 @@ function searchWetaher(e) {
       var temp = Math.round(json.main.temp - 273.15);
 
       document.getElementById("card1").innerHTML = `
-      <h1 id="bigtemp2">${json.name}</h1>
+      <p>${json.name}</p>
+      <p>Latitude: ${json.coord.lat}</p>
+      <p>Longitude: ${json.coord.lon}</p>
+      <h1 class="wi wi-strong-wind"></h1>
       `;
 
       document.getElementById("card2").innerHTML = `
-      <p>${json.weather[0].main}</p>
-      <p id="bigTemp">${temp}<sup>o</sup>C</p>
+      <p>${json.weather[0].main}<br>
+      <p style="text-transform: capitalize">${json.weather[0].description}</p>
+      <p><i class="wi wi-thermometer"></i>${temp}</p>
       `;
 
-      document.getElementById("card3").innerHTML = `
-      <div class="col-md-6">
-      <i class="wi wi-day-sunny"></i>
-      </div>
-      <div class="col-md-6">      
-      <p>Humidity: ${json.main.humidity}</p>
-      <p>Visibility: ${json.visibility} </p>
-      <p>Pressure: ${json.main.pressure}</p>
-      </div>
+      document.getElementById("card3").innerHTML = `  
+      <p> <i class="wi wi-humidity"></i> ${json.main.humidity} %</p>
+      <p> <i class="wi wi-barometer"></i> ${json.main.pressure} millibars </p>
+      <p> <i class="fas fa-eye"></i>  ${json.visibility} m</p>
       `;
     })
     .catch(error => console.log(error));
