@@ -92,11 +92,16 @@ h1 {
 
 ul {
   list-style: none;
+  margin: -1.5rem auto auto -0.8rem;
 }
 li {
-  margin: 1rem 0 1rem -1rem;
-  font-size: 1.7rem;
+  margin: 0.5rem 0 0.5rem -1rem;
+  font-size: 1.8rem;
   padding: 0;
+}
+
+#card2 ul {
+  margin-left: 2.5rem;
 }
 
 /* formx */
@@ -133,8 +138,8 @@ form {
   color: black;
 }
 
-.btn:hover {
-  width: 100px;
+.btn-outline-secondary:hover {
+  width: 5rem;
   background-color: burlywood;
   color: black;
 }
@@ -146,4 +151,35 @@ form {
 #bigTemp {
   font-size: 8vw;
   display: inline;
+}
+
+.col-md-12 {
+  font-size: 1rem;
+}
+
+.wi-thermometer {
+  margin-right: 1rem;
+}
+
+#changeTemp {
+  color: black;
+  background-color: #fffcf5;
+  border: black solid 3px;
+  margin-top: -0.75rem;
+  margin-bottom: 0.75rem;
+  border-radius: 0.5rem;
+  margin-left: -3.5rem;
+}
+
+#changeTemp:hover {
+  width: auto;
+  background-color: burlywood;
+}
+
+img {
+  transition: transform 0.5s ease-in-out;
+}
+
+img:hover {
+  transform: rotate(360deg);
 }
