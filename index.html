@@ -38,25 +38,50 @@
                 </button>
             </div>
         </form>
-        <div class="cardbox">
-            <div class="card mb-3" id="cityDetails">
+        <div class="cardbox" id="cardbox">
+            <div class="card mb-3">
+                <div class="card-header">
+                    <span class="badge badge-pill badge-dark" id="cityDetails"></span>
+                </div>
                 <div class="card-body" id="card1">
                 </div>
             </div>
             <div class="card mb-3">
-                <div class="card-header" id="titleText">Temperature</div>
+                <div class="card-header">
+                    <span class="badge badge-pill badge-dark">Temperature</span>
+                </div>
                 <div class="card-body row" id="card2">
                 </div>
             </div>
 
             <div class="card mb-3">
-                <div class="card-header" id="titleText">Details</div>
+                <div class="card-header">
+                    <span class="badge badge-pill badge-dark">Details</span>
+                </div>
                 <div class="card-body row" id="card3">
                 </div>
             </div>
         </div>
     </div>
     </div>
+
+    <!-- Error Modal -->
+    <div class="modal fade" id="errorModal" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Error Occured ;(</h5>
+                </div>
+                <div class="modal-body">
+                    Please enter a city that exists.
+                </div>
+                <div class="modal-footer" style="justify-content: center">
+                    <button type="button" class="btn btn-dark" style="color:white" data-dismiss="modal">OK, got it !</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <span class="copyright ">
             <strong>&copy; Made with
