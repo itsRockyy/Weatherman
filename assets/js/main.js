@@ -85,9 +85,8 @@ function mapResponseToUI(json) {
     <li>Latitude: ${json.coord.lat}</li>
     <li>Longitude: ${json.coord.lon}</li>
     <li>
-    <img src="assets/windmill.png" alt="wind" style="margin:0">
-    <i class="wi wi-wind ${direction}" style="margin-left:-1rem; margin-right:0;font-size: 1.8rem"></i>${3.6 *
-    windspeed} kmph
+    <img src="assets/windmill.png" alt="wind" style="margin-left:-2rem">
+    <i class="wi wi-wind ${direction}"></i>${3.6 * windspeed} kmph
     </li>
     </ul>
       `;
