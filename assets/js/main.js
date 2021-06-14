@@ -31,7 +31,7 @@ const geo_options = {
 //  OpenweatherMap API call by city
 const searchWeatherByCity = () => {
   let searchParam = document.getElementById("searchParam").value;
-  fetch(`https://itsrockyy.herokuapp.com/api/weatherman?q=${searchParam}`)
+  fetch(`https://itsrockyy-api.netlify.app/weatherman?q=${searchParam}`)
     .then((response) => response.json())
     .then((json) => mapResponseToUI(json))
     .catch(() => $("#errorModal").modal("show"));
@@ -40,7 +40,7 @@ const searchWeatherByCity = () => {
 //  OpenweatherMap API call by coordinates
 const searchWeatherByCoordinates = (latitude, longitude) => {
   fetch(
-    `https://itsrockyy.herokuapp.com/api/weatherman?lat=${latitude}&lon=${longitude}`
+    `https://itsrockyy-api.netlify.app/weatherman?lat=${latitude}&lon=${longitude}`
   )
     .then((response) => response.json())
     .then((json) => mapResponseToUI(json))
